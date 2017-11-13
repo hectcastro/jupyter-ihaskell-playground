@@ -35,7 +35,9 @@ USER jupyter
 
 RUN \
       stack setup \
-      && stack install gtk2hs-buildtools \
+      && stack install \
+            gtk2hs-buildtools \
+            checkers \
       && stack install --fast \
       && stack exec ihaskell install
 
